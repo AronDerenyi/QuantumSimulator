@@ -11,6 +11,7 @@
 #include <sstream>
 #include "AST.h"
 #include "../tokenizer/Tokenizer.h"
+#include "../tokenizer/Token.h"
 
 namespace ast {
 

@@ -4,6 +4,7 @@
 
 #include <map>
 #include "../ast/AST.h"
+#include "../math/Environment.h"
 #include "Instruction.h"
 #include "Program.h"
 

@@ -3,9 +3,7 @@
 
 
 #include <vector>
-#include "Builder.h"
-#include "../math/Environment.h"
-#include "../tokenizer/Token.h"
+#include "../tokenizer/Coordinate.h"
 
 namespace ast { namespace asts {
 
@@ -429,7 +427,8 @@ namespace ast { namespace asts {
 	};
 } }
 
-using namespace ast::asts;
+using namespace ast;
+using namespace asts;
 
 
 #endif //QUANTUMSIMULATOR_AST_H

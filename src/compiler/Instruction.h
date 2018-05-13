@@ -166,7 +166,8 @@ namespace compiler { namespace instructions {
 	};
 } }
 
-using namespace compiler::instructions;
+using namespace compiler;
+using namespace instructions;
 
 
 #endif //QUANTUMSIMULATOR_COMMAND_H

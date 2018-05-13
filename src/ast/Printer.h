@@ -2,6 +2,7 @@
 #define QUANTUMSIMULATOR_PRINTER_H
 
 
+#include <iostream>
 #include "AST.h"
 
 namespace ast {

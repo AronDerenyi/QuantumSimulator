@@ -4,10 +4,6 @@
 
 #include <vector>
 #include <map>
-#include <stack>
-#include <random>
-#include <cfloat>
-#include "../ast/AST.h"
 #include "Instruction.h"
 
 namespace compiler {
