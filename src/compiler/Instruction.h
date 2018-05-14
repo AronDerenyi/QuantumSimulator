@@ -1,5 +1,5 @@
-#ifndef QUANTUMSIMULATOR_COMMAND_H
-#define QUANTUMSIMULATOR_COMMAND_H
+#ifndef QUANTUMSIMULATOR_INSTRUCTION_H
+#define QUANTUMSIMULATOR_INSTRUCTION_H
 
 
 #include <vector>
@@ -45,8 +45,8 @@ namespace compiler { namespace instructions {
 	 * Applies a unitary gate to a qubit.
 	 *
 	 * Gate transformation matrix:
-	 * e^(−i(φ+λ)/2)*cos(θ/2) −e^(−i(φ−λ)/2)*sin(θ/2)
-	 * e^(i(φ−λ)/2)*sin(θ/2)   e^(i(φ+λ)/2)*cos(θ/2)
+	 * e^(-i(phi+lambda)/2)*cos(theta/2) -e^(-i(phi-lambda)/2)*sin(theta/2)
+	 * e^(i(phi-lambda)/2)*sin(theta/2)   e^(i(phi+lambda)/2)*cos(theta/2)
 	 */
 	class U : public Instruction {
 	private:
@@ -170,4 +170,4 @@ using namespace compiler;
 using namespace instructions;
 
 
-#endif //QUANTUMSIMULATOR_COMMAND_H
+#endif //QUANTUMSIMULATOR_INSTRUCTION_H

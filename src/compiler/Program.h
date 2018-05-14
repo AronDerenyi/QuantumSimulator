@@ -1,5 +1,5 @@
-#ifndef QUANTUMSIMULATOR_INTERPRETER_H
-#define QUANTUMSIMULATOR_INTERPRETER_H
+#ifndef QUANTUMSIMULATOR_PROGRAM_H
+#define QUANTUMSIMULATOR_PROGRAM_H
 
 
 #include <vector>
@@ -71,4 +71,4 @@ namespace compiler {
 using namespace compiler;
 
 
-#endif //QUANTUMSIMULATOR_INTERPRETER_H
+#endif //QUANTUMSIMULATOR_PROGRAM_H

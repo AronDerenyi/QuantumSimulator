@@ -35,7 +35,7 @@ int main(int argc, const char *argv[]) {
 #endif
 
 	// Checking argument validity
-	for (int i = 0; i < iterationArgument.size(); i++) if (!isnumber(iterationArgument[i])) {
+	for (int i = 0; i < iterationArgument.size(); i++) if (!isdigit(iterationArgument[i])) {
 		std::cerr << "Invalid iteration count" << std::endl;
 		printUsage(programArgument);
 		return 1;

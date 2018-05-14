@@ -37,7 +37,7 @@ std::string Token::getString() {
 	if (value[0] != '\"') return value;
 
 	std::string string;
-	for (int i = 1; i < value.size() - 1; i++) {
+	for (unsigned long i = 1; i < value.size() - 1; i++) {
 		if (value[i] == '\\') {
 			i++;
 			if (value[i] == '\\') {
@@ -60,7 +60,7 @@ std::string Token::getString() {
 				string += '\t';
 			} else if (isdigit(value[i])) {
 				int n = 0;
-				while (isnumber(value[i])) {
+				while (isdigit(value[i])) {
 					n = n * 10 + value[i] - 48;
 					i++;
 				}

@@ -60,9 +60,13 @@ Tokenizer::Matcher Tokenizer::matchers[] = {
 
 std::vector<Token> Tokenizer::tokenize(const std::string &file) {
 	std::vector<Token> tokens;
+
 	std::ifstream input(file);
 	if (!input.good()) throw std::runtime_error("The file: \"" + file + "\" doesn't exist.");
-	std::string code = (std::stringstream() << input.rdbuf()).str();
+
+	std::stringstream buffer;
+	buffer << input.rdbuf();
+	std::string code = buffer.str();
 
 	Coordinate coordinate(file, 1, 1);
 	Token token;

@@ -54,7 +54,7 @@ double Environment::getQubitChance(unsigned long qubit) const {
 void Environment::applyTransform(unsigned long qubit, Complex matrix[2][2]) {
 	unsigned long state = 0;
 	unsigned long pos = 1ul << qubit;
-	for (int i = 0; i < getStateCount() >> 1ul; i++, state++) {
+	for (unsigned long i = 0; i < getStateCount() >> 1ul; i++, state++) {
 		if (state & pos) state += pos;
 
 		unsigned long state1 = state;
