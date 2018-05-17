@@ -14,8 +14,8 @@ int main(int argc, const char *argv[]) {
 	std::string iterationArgument;
 
 #ifdef CPORTA
-	// Getting arguments from the standard input
 
+	// Getting arguments from the standard input
 	std::cin >> fileArgument;
 	std::cin >> iterationArgument;
 
@@ -53,13 +53,15 @@ int main(int argc, const char *argv[]) {
 	// Compiling
 	std::cout << "Compiling..." << std::endl;
 	Program *p = Compiler::compile(ast);
+	delete ast;
 
 	// Executing
 	std::cout << "Executing..." << std::endl;
 	for (int i = 0; i < iterations; i++) {
 		p->execute();
-		if (i != 0 && i % (iterations / 10) == 0) {
-			std::cout << i / (iterations / 10) << "0% ";
+		double div = ((double) iterations) / 10;
+		if (i != 0 && (int) (i / div) != (int) ((i - 1) / div)) {
+			std::cout << (int) (i / div) << "0% ";
 			std::cout.flush();
 		}
 	}
@@ -69,5 +71,6 @@ int main(int argc, const char *argv[]) {
 	std::cout << std::endl << "Results: " << std::endl;
 	p->printResults();
 
+	delete p;
 	return 0;
 }
